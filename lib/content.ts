@@ -162,7 +162,7 @@ export const content = {
     tagline: "Daily Demotivation — weil Realismus keine Lernkurve hat.",
     developer: "coodoo GmbH",
     links: [
-      { label: "Impressum", href: "/impressum" },
+      { label: "Impressum", href: "https://www.coodoo.de/impressum" },
       { label: "Datenschutz", href: "/datenschutz" },
     ],
   },
