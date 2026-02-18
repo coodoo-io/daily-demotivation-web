@@ -164,9 +164,7 @@ export const content = {
     links: [
       { label: "Impressum", href: "/impressum" },
       { label: "Datenschutz", href: "/datenschutz" },
-      { label: "GitHub", href: "https://github.com/coodoo-io" },
     ],
-    contact: "support@coodoo.de",
   },
 
   storeLinks: {

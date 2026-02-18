@@ -24,30 +24,25 @@ export default function ImpressumPage() {
           <p>
             coodoo GmbH
             <br />
-            [Straße und Hausnummer]
+            Wilhelm-Theodor-Römheld-Straße 2
             <br />
-            [PLZ Ort]
+            55130 Mainz
             <br />
             Deutschland
           </p>
         </section>
 
         <section>
-          <h2 className="text-base font-semibold text-white mb-2">Kontakt</h2>
-          <p>
-            E-Mail:{" "}
-            <a href="mailto:support@coodoo.de" className="text-white hover:underline">
-              support@coodoo.de
-            </a>
-          </p>
+          <h2 className="text-base font-semibold text-white mb-2">Geschäftsführer</h2>
+          <p>Markus Kühle, Jan Marsh</p>
         </section>
 
         <section>
           <h2 className="text-base font-semibold text-white mb-2">Handelsregister</h2>
           <p>
-            Registergericht: [Amtsgericht]
+            Registergericht: Amtsgericht Mainz
             <br />
-            Registernummer: [HRB-Nummer]
+            Registernummer: HRB 44076
           </p>
         </section>
 
@@ -56,13 +51,28 @@ export default function ImpressumPage() {
           <p>
             Umsatzsteuer-Identifikationsnummer gemäß § 27a UStG:
             <br />
-            [USt-IdNr.]
+            DE283497556
+          </p>
+        </section>
+
+        <section>
+          <h2 className="text-base font-semibold text-white mb-2">Kontakt</h2>
+          <p>
+            <a href="mailto:mail@coodoo.de" className="text-white hover:underline">
+              mail@coodoo.de
+            </a>
           </p>
         </section>
 
         <section>
           <h2 className="text-base font-semibold text-white mb-2">Verantwortlich für den Inhalt</h2>
-          <p>coodoo GmbH</p>
+          <p>
+            coodoo GmbH
+            <br />
+            Wilhelm-Theodor-Römheld-Straße 2
+            <br />
+            55130 Mainz
+          </p>
         </section>
       </div>
     </main>

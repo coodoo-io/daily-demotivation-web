@@ -36,18 +36,10 @@ export function Footer() {
                 href={link.href}
                 className="text-xs transition-colors duration-200 hover:text-white"
                 style={{ color: "#555555" }}
-                {...(link.href.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})}
               >
                 {link.label}
               </Link>
             ))}
-            <a
-              href={`mailto:${footer.contact}`}
-              className="text-xs transition-colors duration-200 hover:text-white"
-              style={{ color: "#555555" }}
-            >
-              {footer.contact}
-            </a>
           </nav>
         </div>
 
