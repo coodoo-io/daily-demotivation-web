@@ -6,13 +6,10 @@ export function HeroSection() {
 
   return (
     <section className="relative min-h-screen flex flex-col justify-center overflow-hidden">
-      {/* Background gradient */}
+      {/* Background gradient — theme-controlled */}
       <div
         className="absolute inset-0 pointer-events-none"
-        style={{
-          background:
-            "radial-gradient(ellipse 80% 60% at 50% -10%, rgba(192,57,43,0.15) 0%, transparent 60%)",
-        }}
+        style={{ background: "var(--t-hero-gradient)" }}
       />
 
       {/* Noise texture overlay */}
@@ -29,9 +26,9 @@ export function HeroSection() {
           <span
             className="text-xs font-semibold tracking-widest uppercase px-4 py-1.5 rounded-full border"
             style={{
-              color: "#C0392B",
-              borderColor: "rgba(192,57,43,0.4)",
-              backgroundColor: "rgba(192,57,43,0.08)",
+              color: "var(--t-accent)",
+              borderColor: "var(--t-accent-border)",
+              backgroundColor: "var(--t-accent-subtle)",
             }}
           >
             {hero.badge}
@@ -39,23 +36,24 @@ export function HeroSection() {
         </div>
 
         {/* Headline */}
-        <h1
-          className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[1.05] mb-6"
-          style={{ fontFamily: "'Inter', sans-serif" }}
-        >
+        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[1.05] mb-6">
           {hero.headline.split("\n").map((line, i) => (
-            <span key={i} className={i === 0 ? "block" : "block"} style={i === 1 ? { color: "#C0392B" } : {}}>
+            <span
+              key={i}
+              className="block"
+              style={i === 1 ? { color: "var(--t-accent)" } : { color: "var(--t-text)" }}
+            >
               {line}
             </span>
           ))}
         </h1>
 
         {/* Subline */}
-        <p className="text-xl md:text-2xl font-medium mb-4" style={{ color: "#888888" }}>
+        <p className="text-xl md:text-2xl font-medium mb-4" style={{ color: "var(--t-text-muted)" }}>
           {hero.subline}
         </p>
 
-        <p className="text-base md:text-lg max-w-lg mx-auto mb-12" style={{ color: "#555555" }}>
+        <p className="text-base md:text-lg max-w-lg mx-auto mb-12" style={{ color: "var(--t-text-dim)" }}>
           {hero.description}
         </p>
 
@@ -64,7 +62,7 @@ export function HeroSection() {
           <Link
             href={storeLinks.appStore}
             className="group flex items-center gap-3 px-7 py-4 rounded-xl font-semibold text-white transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]"
-            style={{ backgroundColor: "#C0392B" }}
+            style={{ backgroundColor: "var(--t-accent)" }}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -81,9 +79,9 @@ export function HeroSection() {
             href={storeLinks.googlePlay}
             className="group flex items-center gap-3 px-7 py-4 rounded-xl font-semibold transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]"
             style={{
-              backgroundColor: "#141414",
-              border: "1px solid #2A2A2A",
-              color: "#FFFFFF",
+              backgroundColor: "var(--t-surface)",
+              border: "1px solid var(--t-border)",
+              color: "var(--t-text)",
             }}
             target="_blank"
             rel="noopener noreferrer"
@@ -99,9 +97,14 @@ export function HeroSection() {
         </div>
 
         {/* Scroll indicator */}
-        <div className="mt-24 flex flex-col items-center gap-2" style={{ color: "#3A3A3A" }}>
+        <div className="mt-24 flex flex-col items-center gap-2" style={{ color: "var(--t-border)" }}>
           <span className="text-xs tracking-widest uppercase">{hero.scrollHint}</span>
-          <div className="w-px h-12 bg-gradient-to-b from-[#3A3A3A] to-transparent" />
+          <div
+            className="w-px h-12"
+            style={{
+              background: "linear-gradient(to bottom, var(--t-border), transparent)",
+            }}
+          />
         </div>
       </div>
     </section>

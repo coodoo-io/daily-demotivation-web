@@ -1,16 +1,26 @@
 @import "tailwindcss";
 
-@theme {
-  --color-background: #0A0A0A;
-  --color-surface: #141414;
-  --color-surface-2: #1E1E1E;
-  --color-accent: #C0392B;
-  --color-accent-hover: #A93226;
-  --color-text: #FFFFFF;
-  --color-muted: #888888;
-  --color-border: #2A2A2A;
-
-  --font-family-sans: "Inter", system-ui, sans-serif;
+/* Default theme: Midnight */
+:root {
+  --t-bg: #0A0A0A;
+  --t-bg-alt: #080808;
+  --t-surface: #141414;
+  --t-surface-2: #1E1E1E;
+  --t-text: #FFFFFF;
+  --t-text-muted: #888888;
+  --t-text-dim: #555555;
+  --t-text-dimmer: #333333;
+  --t-text-subtle: #CCCCCC;
+  --t-accent: #C0392B;
+  --t-accent-subtle: rgba(192, 57, 43, 0.12);
+  --t-accent-border: rgba(192, 57, 43, 0.4);
+  --t-accent-glow: rgba(192, 57, 43, 0.15);
+  --t-border: #2A2A2A;
+  --t-border-2: #1A1A1A;
+  --t-nav-bg: rgba(10, 10, 10, 0.85);
+  --t-body-gradient: #0A0A0A;
+  --t-hero-gradient: radial-gradient(ellipse 80% 60% at 50% -10%, rgba(192, 57, 43, 0.15) 0%, transparent 60%);
+  --t-font: var(--font-inter);
 }
 
 html {
@@ -18,9 +28,12 @@ html {
 }
 
 body {
-  background-color: #0A0A0A;
-  color: #FFFFFF;
-  font-family: "Inter", system-ui, sans-serif;
+  background: var(--t-body-gradient);
+  color: var(--t-text);
+  font-family: var(--t-font), system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition:
+    background 0.4s ease,
+    color 0.3s ease;
 }

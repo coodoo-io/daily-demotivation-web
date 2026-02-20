@@ -16,12 +16,17 @@ export function FeaturesSection() {
   const { features } = content;
 
   return (
-    <section id="features" className="py-24 px-6">
+    <section id="features" className="py-24 px-6" style={{ backgroundColor: "var(--t-bg)" }}>
       <div className="max-w-6xl mx-auto">
         {/* Headline */}
         <div className="mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-3">{features.headline}</h2>
-          <p className="text-lg" style={{ color: "#888888" }}>
+          <h2
+            className="text-4xl md:text-5xl font-bold tracking-tight mb-3"
+            style={{ color: "var(--t-text)" }}
+          >
+            {features.headline}
+          </h2>
+          <p className="text-lg" style={{ color: "var(--t-text-muted)" }}>
             {features.subline}
           </p>
         </div>
@@ -33,26 +38,26 @@ export function FeaturesSection() {
             return (
               <div
                 key={item.title}
-                className="group rounded-2xl p-7 transition-all duration-300 hover:border-[#C0392B]/30"
+                className="rounded-2xl p-7 transition-all duration-300"
                 style={{
-                  backgroundColor: "#141414",
-                  border: "1px solid #2A2A2A",
+                  backgroundColor: "var(--t-surface)",
+                  border: "1px solid var(--t-border)",
                 }}
               >
                 <div
                   className="w-10 h-10 rounded-xl flex items-center justify-center mb-5"
                   style={{
-                    backgroundColor: "rgba(192,57,43,0.12)",
-                    color: "#C0392B",
+                    backgroundColor: "var(--t-accent-subtle)",
+                    color: "var(--t-accent)",
                   }}
                 >
                   <Icon size={18} strokeWidth={1.5} />
                 </div>
 
-                <h3 className="text-base font-semibold mb-2" style={{ color: "#FFFFFF" }}>
+                <h3 className="text-base font-semibold mb-2" style={{ color: "var(--t-text)" }}>
                   {item.title}
                 </h3>
-                <p className="text-sm leading-relaxed" style={{ color: "#888888" }}>
+                <p className="text-sm leading-relaxed" style={{ color: "var(--t-text-muted)" }}>
                   {item.description}
                 </p>
               </div>

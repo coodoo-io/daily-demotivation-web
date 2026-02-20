@@ -8,7 +8,11 @@ export function Footer() {
   return (
     <footer
       className="border-t py-12 px-6"
-      style={{ borderColor: "#1A1A1A", backgroundColor: "#080808" }}
+      style={{
+        borderColor: "var(--t-border-2)",
+        backgroundColor: "var(--t-bg-alt)",
+        transition: "background-color 0.4s ease",
+      }}
     >
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
@@ -17,13 +21,15 @@ export function Footer() {
             <div className="flex items-center gap-2.5 mb-3">
               <div
                 className="w-7 h-7 rounded-lg flex items-center justify-center text-white text-xs font-bold"
-                style={{ backgroundColor: "#C0392B" }}
+                style={{ backgroundColor: "var(--t-accent)" }}
               >
                 D
               </div>
-              <span className="font-semibold text-sm">Daily Demotivation</span>
+              <span className="font-semibold text-sm" style={{ color: "var(--t-text)" }}>
+                Daily Demotivation
+              </span>
             </div>
-            <p className="text-xs max-w-xs leading-relaxed" style={{ color: "#555555" }}>
+            <p className="text-xs max-w-xs leading-relaxed" style={{ color: "var(--t-text-dim)" }}>
               {footer.tagline}
             </p>
           </div>
@@ -34,8 +40,8 @@ export function Footer() {
               <Link
                 key={link.label}
                 href={link.href}
-                className="text-xs transition-colors duration-200 hover:text-white"
-                style={{ color: "#555555" }}
+                className="text-xs transition-colors duration-200"
+                style={{ color: "var(--t-text-dimmer)" }}
                 {...(link.href.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})}
               >
                 {link.label}
@@ -47,12 +53,12 @@ export function Footer() {
         {/* Bottom bar */}
         <div
           className="mt-8 pt-8 border-t flex flex-col sm:flex-row items-center justify-between gap-2"
-          style={{ borderColor: "#1A1A1A" }}
+          style={{ borderColor: "var(--t-border-2)" }}
         >
-          <span className="text-xs" style={{ color: "#333333" }}>
+          <span className="text-xs" style={{ color: "var(--t-text-dimmer)" }}>
             © {currentYear} {footer.developer}. Alle Rechte vorbehalten.
           </span>
-          <span className="text-xs" style={{ color: "#333333" }}>
+          <span className="text-xs" style={{ color: "var(--t-text-dimmer)" }}>
             iOS 12+ · Android 6+
           </span>
         </div>
